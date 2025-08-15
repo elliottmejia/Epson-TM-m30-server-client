@@ -13,7 +13,8 @@ const {
 export async function printTicket(
   title?: string,
   body?: string,
-  imageBuffer?: Buffer | null
+  imageBuffer?: Buffer | null,
+  opts?: { font?: string }
 ) {
   const printer = new ThermalPrinter({
     type: PrinterTypes.EPSON,
@@ -43,10 +44,21 @@ export async function printTicket(
 
   // Render EVA title as an image and clamp to 16 tones
   if (title && title.trim().length) {
-    const titleRaster = await renderTitleImage(title.trim());
-    const titleClamped = await normalizeImage(titleRaster);
-    await printer.printImageBuffer(titleClamped);
-    printer.newLine();
+    if (opts?.font && opts.font.toLowerCase() !== "default") {
+      const titleRaster = await renderTitleImage(title.trim(), {
+        font: opts.font,
+      });
+      const titleClamped = await normalizeImage(titleRaster);
+      await printer.printImageBuffer(titleClamped);
+      printer.newLine();
+    } else {
+      printer.alignCenter();
+      if (typeof printer.setTextDoubleHeight === "function")
+        printer.setTextDoubleHeight();
+      printer.println(title.trim());
+      if (typeof printer.setTextNormal === "function") printer.setTextNormal();
+      printer.alignLeft();
+    }
   }
 
   // Optional rule

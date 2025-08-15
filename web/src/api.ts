@@ -2,6 +2,7 @@ export type PrintPayload = {
   title: string;
   body: string;
   file?: File | null;
+  font?: string;
 };
 
 export async function getHealth() {
@@ -15,6 +16,7 @@ export async function sendPrintMultipart(payload: PrintPayload) {
   form.append('title', payload.title);
   form.append('body', payload.body);
   if (payload.file) form.append('image', payload.file);
+  if (payload.font) form.append("font", payload.font);
 
   const res = await fetch('/api/v1/print-multipart', {
     method: 'POST',
@@ -35,14 +37,15 @@ export async function sendPrintBase64(payload: PrintPayload) {
     imageBase64 = await fileToBase64(payload.file);
   }
 
-  const res = await fetch('/api/v1/print', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
+  const res = await fetch("/api/v1/print", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
     body: JSON.stringify({
       title: payload.title,
       body: payload.body,
-      imageBase64
-    })
+      imageBase64,
+      font: payload.font ?? "default",
+    }),
   });
 
   if (!res.ok) {

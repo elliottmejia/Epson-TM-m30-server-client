@@ -4,6 +4,7 @@ import { getHealth, sendPrintMultipart, sendPrintBase64 } from './api';
 export default function App() {
   const [title, setTitle] = useState('Test ticket');
   const [body, setBody] = useState('Hello from the frontend');
+  const [font, setFont] = useState("default");
   const [file, setFile] = useState<File | null>(null);
   const [health, setHealth] = useState('checking...');
   const [useMultipart, setUseMultipart] = useState(true);
@@ -24,11 +25,11 @@ export default function App() {
     setMsg(null);
     try {
       if (useMultipart) {
-        await sendPrintMultipart({ title, body, file });
+        await sendPrintMultipart({ title, body, font, file });
       } else {
-        await sendPrintBase64({ title, body, file });
+        await sendPrintBase64({ title, body, font, file });
       }
-      setMsg('Sent to printer');
+      setMsg("Sent to printer");
     } catch (e: any) {
       setMsg(`Error: ${e?.message ?? String(e)}`);
     } finally {
@@ -38,15 +39,25 @@ export default function App() {
 
   return (
     <div className="container">
-      <h1>TM‑M30 Printer Console</h1>
+      <h1 className={font === "evangelion" ? "eva-title" : undefined}>
+        TM‑M30 Printer Console
+      </h1>
       <p className="muted">Health: {health}</p>
 
       <form onSubmit={onSubmit} className="grid">
         <label>
+          <div>Font</div>
+          <select value={font} onChange={(e) => setFont(e.target.value)}>
+            <option value="default">default</option>
+            <option value="evangelion">evangelion</option>
+          </select>
+        </label>
+
+        <label>
           <div>Title</div>
           <input
             value={title}
-            onChange={e => setTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)}
             required
             placeholder="Receipt title"
           />
@@ -56,7 +67,7 @@ export default function App() {
           <div>Body</div>
           <textarea
             value={body}
-            onChange={e => setBody(e.target.value)}
+            onChange={(e) => setBody(e.target.value)}
             rows={5}
             placeholder="Body text"
           />
@@ -67,7 +78,7 @@ export default function App() {
           <input
             type="file"
             accept="image/*"
-            onChange={e => setFile(e.target.files?.[0] ?? null)}
+            onChange={(e) => setFile(e.target.files?.[0] ?? null)}
           />
         </label>
 
@@ -90,13 +101,13 @@ export default function App() {
           <input
             type="checkbox"
             checked={useMultipart}
-            onChange={e => setUseMultipart(e.target.checked)}
+            onChange={(e) => setUseMultipart(e.target.checked)}
           />
           <span>Send as multipart form-data</span>
         </label>
 
         <button disabled={busy} type="submit">
-          {busy ? 'Printing...' : 'Print'}
+          {busy ? "Printing..." : "Print"}
         </button>
       </form>
 
@@ -108,7 +119,9 @@ export default function App() {
         <summary>Notes</summary>
         <ul>
           <li>The server clamps width and quantizes to 16 tones.</li>
-          <li>Multipart avoids base64 overhead and is preferred for large images.</li>
+          <li>
+            Multipart avoids base64 overhead and is preferred for large images.
+          </li>
           <li>During dev, Vite proxies /api to port 3000.</li>
         </ul>
       </details>
