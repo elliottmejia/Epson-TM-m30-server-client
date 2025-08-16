@@ -1,0 +1,28 @@
+{
+  "name": "print-server dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev",
+  "workspaceFolder": "/workspaces/server",
+  "forwardPorts": [3000, 5173],
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+  "containerUser": "root",
+  "postCreateCommand": "bun install && cd web && bun install || true",
+  "postStartCommand": "echo 'Ready. Run: bun --watch src/server.ts' && echo 'Optional web dev: bun --cwd web run dev'",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "files.watcherExclude": {
+          "**/node_modules/**": true
+        }
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}

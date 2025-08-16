@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  dev:
+    image: oven/bun:1
+    working_dir: /workspaces/server
+    command: sh -lc "sleep infinity"
+    environment:
+      NODE_ENV: development
+      PRINTER_ADDR: tcp://192.168.4.90:9100
+    volumes:
+      - ..:/workspaces/server:cached
+      - bun-cache:/root/.bun
+      - node-modules:/workspaces/server/node_modules
+      - web-node-modules:/workspaces/server/web/node_modules
+    ports:
+      - "3000:3000"
+      - "5173:5173"
+volumes:
+  bun-cache:
+  node-modules:
+  web-node-modules:
