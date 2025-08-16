@@ -13,7 +13,7 @@ services:
       - node-modules:/workspaces/server/node_modules
       - web-node-modules:/workspaces/server/web/node_modules
     ports:
-      - "3000:3000"
+      - "8080:8080"
       - "5173:5173"
 volumes:
   bun-cache:

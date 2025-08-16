@@ -141,7 +141,7 @@ export default function App() {
           <li>
             Multipart avoids base64 overhead and is preferred for large images.
           </li>
-          <li>During dev, Vite proxies /api to port 3000.</li>
+          <li>During dev, Vite proxies /api to port 8080.</li>
         </ul>
       </details>
     </div>

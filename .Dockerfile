@@ -42,7 +42,7 @@ COPY --from=serverbuild /app/tsconfig.json ./tsconfig.json
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
   CMD curl -fsS http://127.0.0.1:3000/health || exit 1
 
-EXPOSE 3000
+EXPOSE 8080
 # PRINTER_ADDR like "tcp://192.168.4.90:9100"
 ENV PRINTER_ADDR="tcp://printer.local:9100"
 CMD ["bun", "src/server.ts"]

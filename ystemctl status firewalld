@@ -1,0 +1,276 @@
+[0;1;31m●[0m epson
+    State: [0;1;31mdegraded[0m
+    Units: 526 loaded (incl. loaded aliases)
+     Jobs: 0 queued
+   Failed: 1 units
+    Since: Sat 2025-08-16 10:39:06 EDT; 6h ago
+  systemd: 257-11.el10-g3ddb4df
+  Tainted: [0;1;38:5:185mlocal-hwclock[0m
+   CGroup: /
+           ├─init.scope
+           │ └─[0;38;5;245m1 /usr/lib/systemd/systemd --switched-root --system --deserialize=43 rhgb[0m
+           ├─system.slice
+           │ ├─ModemManager.service
+           │ │ └─[0;38;5;245m1306 /usr/sbin/ModemManager[0m
+           │ ├─NetworkManager.service
+           │ │ └─[0;38;5;245m1359 /usr/sbin/NetworkManager --no-daemon[0m
+           │ ├─accounts-daemon.service
+           │ │ └─[0;38;5;245m1213 /usr/libexec/accounts-daemon[0m
+           │ ├─alsa-state.service
+           │ │ └─[0;38;5;245m1259 /usr/sbin/alsactl -s -n 19 -c -E ALSA_CONFIG_PATH=/etc/alsa/alsactl.conf --initfile=/lib/alsa/init/00main rdaemon[0m
+           │ ├─atd.service
+           │ │ └─[0;38;5;245m1413 /usr/sbin/atd -f[0m
+           │ ├─auditd.service
+           │ │ ├─[0;38;5;245m1138 /usr/sbin/auditd[0m
+           │ │ └─[0;38;5;245m1140 /usr/sbin/sedispatch[0m
+           │ ├─avahi-daemon.service
+           │ │ ├─[0;38;5;245m30479 "avahi-daemon: running [epson.local]"[0m
+           │ │ └─[0;38;5;245m30480 "avahi-daemon: chroot helper"[0m
+           │ ├─bluetooth.service
+           │ │ └─[0;38;5;245m1194 /usr/libexec/bluetooth/bluetoothd[0m
+           │ ├─chronyd.service
+           │ │ └─[0;38;5;245m1258 /usr/sbin/chronyd -F 2[0m
+           │ ├─colord.service
+           │ │ └─[0;38;5;245m1532 /usr/libexec/colord[0m
+           │ ├─crond.service
+           │ │ └─[0;38;5;245m1414 /usr/sbin/crond -n[0m
+           │ ├─cups.service
+           │ │ └─[0;38;5;245m1400 /usr/sbin/cupsd -l[0m
+           │ ├─dbus-broker.service
+           │ │ ├─[0;38;5;245m1180 /usr/bin/dbus-broker-launch --scope system --audit[0m
+           │ │ └─[0;38;5;245m1189 dbus-broker --log 4 --controller 9 --machine-id 8672520c95d646dbaa28ed95ee2cc60f --max-bytes 536870912 --max-fds 4096 --max-matches 131072 --audit[0m
+           │ ├─fwupd.service
+           │ │ └─[0;38;5;245m3145 /usr/libexec/fwupd/fwupd[0m
+           │ ├─gdm.service
+           │ │ └─[0;38;5;245m1415 /usr/sbin/gdm[0m
+           │ ├─iio-sensor-proxy.service
+           │ │ └─[0;38;5;245m1202 /usr/libexec/iio-sensor-proxy[0m
+           │ ├─irqbalance.service
+           │ │ └─[0;38;5;245m1204 /usr/sbin/irqbalance[0m
+           │ ├─libstoragemgmt.service
+           │ │ └─[0;38;5;245m1205 /usr/bin/lsmd -d[0m
+           │ ├─mcelog.service
+           │ │ └─[0;38;5;245m1206 /usr/sbin/mcelog --daemon --foreground[0m
+           │ ├─packagekit.service
+           │ │ └─[0;38;5;245m30519 /usr/libexec/packagekitd[0m
+           │ ├─polkit.service
+           │ │ └─[0;38;5;245m1208 /usr/lib/polkit-1/polkitd --no-debug --log-level=err[0m
+           │ ├─rsyslog.service
+           │ │ └─[0;38;5;245m2122 /usr/sbin/rsyslogd -n[0m
+           │ ├─rtkit-daemon.service
+           │ │ └─[0;38;5;245m1209 /usr/libexec/rtkit-daemon[0m
+           │ ├─smartd.service
+           │ │ └─[0;38;5;245m1211 /usr/sbin/smartd -n -q never --capabilities=mail[0m
+           │ ├─sshd.service
+           │ │ └─[0;38;5;245m1402 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"[0m
+           │ ├─sssd-kcm.service
+           │ │ └─[0;38;5;245m2857 /usr/libexec/sssd/sssd_kcm --logger=files[0m
+           │ ├─switcheroo-control.service
+           │ │ └─[0;38;5;245m1216 /usr/libexec/switcheroo-control[0m
+           │ ├─systemd-journald.service
+           │ │ └─[0;38;5;245m918 /usr/lib/systemd/systemd-journald[0m
+           │ ├─systemd-logind.service
+           │ │ └─[0;38;5;245m1218 /usr/lib/systemd/systemd-logind[0m
+           │ ├─systemd-udevd.service
+           │ │ └─udev
+           │ │   └─[0;38;5;245m968 /usr/lib/systemd/systemd-udevd[0m
+           │ ├─systemd-userdbd.service
+           │ │ ├─[0;38;5;245m  957 /usr/lib/systemd/systemd-userdbd[0m
+           │ │ ├─[0;38;5;245m30526 "systemd-userwork: waiting..."[0m
+           │ │ ├─[0;38;5;245m30550 "systemd-userwork: waiting..."[0m
+           │ │ └─[0;38;5;245m30551 "systemd-userwork: waiting..."[0m
+           │ ├─tuned-ppd.service
+           │ │ └─[0;38;5;245m1442 /usr/bin/python3 -Es /usr/sbin/tuned-ppd -l[0m
+           │ ├─tuned.service
+           │ │ └─[0;38;5;245m1406 /usr/bin/python3 -Es /usr/sbin/tuned -l -P[0m
+           │ ├─udisks2.service
+           │ │ └─[0;38;5;245m1224 /usr/libexec/udisks2/udisksd[0m
+           │ ├─upower.service
+           │ │ └─[0;38;5;245m1226 /usr/libexec/upowerd[0m
+           │ └─wpa_supplicant.service
+           │   └─[0;38;5;245m1386 /usr/sbin/wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -u -s[0m
+           └─user.slice
+             └─user-1000.slice
+               ├─session-2.scope
+               │ ├─[0;38;5;245m2274 "gdm-session-worker [pam/gdm-password]"[0m
+               │ ├─[0;38;5;245m2305 /usr/bin/gnome-keyring-daemon --daemonize --login[0m
+               │ ├─[0;38;5;245m2320 /usr/libexec/gdm-wayland-session /usr/bin/gnome-session[0m
+               │ └─[0;38;5;245m2334 /usr/libexec/gnome-session-binary[0m
+               └─user@1000.service
+                 ├─app.slice
+                 │ ├─app-dbus\x2d:1.21\x2dorg.a11y.atspi.Registry.slice
+                 │ │ └─dbus-:1.21-org.a11y.atspi.Registry@0.service
+                 │ │   └─[0;38;5;245m2484 /usr/libexec/at-spi2-registryd --use-gnome-session[0m
+                 │ ├─app-dbus\x2d:1.2\x2dorg.freedesktop.portal.IBus.slice
+                 │ │ └─dbus-:1.2-org.freedesktop.portal.IBus@0.service
+                 │ │   └─[0;38;5;245m2753 /usr/libexec/ibus-portal[0m
+                 │ ├─app-dbus\x2d:1.2\x2dorg.gnome.Identity.slice
+                 │ │ └─dbus-:1.2-org.gnome.Identity@0.service
+                 │ │   └─[0;38;5;245m2755 /usr/libexec/goa-identity-service[0m
+                 │ ├─app-dbus\x2d:1.2\x2dorg.gnome.OnlineAccounts.slice
+                 │ │ └─dbus-:1.2-org.gnome.OnlineAccounts@0.service
+                 │ │   └─[0;38;5;245m2534 /usr/libexec/goa-daemon[0m
+                 │ ├─app-dbus\x2d:1.2\x2dorg.gnome.Ptyxis.slice
+                 │ │ └─dbus-:1.2-org.gnome.Ptyxis@1.service
+                 │ │   ├─[0;38;5;245m28231 /usr/bin/ptyxis --gapplication-service[0m
+                 │ │   └─[0;38;5;245m28238 /usr/libexec/ptyxis-agent --socket-fd=3 --rlimit-nofile=1024[0m
+                 │ ├─app-dbus\x2d:1.2\x2dorg.gnome.ScreenSaver.slice
+                 │ │ └─dbus-:1.2-org.gnome.ScreenSaver@0.service
+                 │ │   └─[0;38;5;245m2756 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver[0m
+                 │ ├─app-dbus\x2d:1.2\x2dorg.gnome.Shell.CalendarServer.slice
+                 │ │ └─dbus-:1.2-org.gnome.Shell.CalendarServer@0.service
+                 │ │   └─[0;38;5;245m2491 /usr/libexec/gnome-shell-calendar-server[0m
+                 │ ├─app-dbus\x2d:1.2\x2dorg.gnome.Shell.Notifications.slice
+                 │ │ └─dbus-:1.2-org.gnome.Shell.Notifications@0.service
+                 │ │   └─[0;38;5;245m2535 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications[0m
+                 │ ├─app-gnome-code-30057.scope
+                 │ │ ├─[0;38;5;245m30057 /usr/share/code/code[0m
+                 │ │ ├─[0;38;5;245m30062 /usr/share/code/code --type=zygote --no-zygote-sandbox[0m
+                 │ │ ├─[0;38;5;245m30063 /usr/share/code/code --type=zygote[0m
+                 │ │ ├─[0;38;5;245m30065 /usr/share/code/code --type=zygote[0m
+                 │ │ ├─[0;38;5;245m30084 /usr/share/code/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-rate-limit --database=/home/elliottmejia/.config/Code/Crashpad "--url=appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=78dc76e4-68cb-4db7-89b9-a6ef209bdfda&iid=78dc76e4-68cb-4db7-89b9-a6ef209bdfda&sid=78dc76e4-68cb-4db7-89b9-a6ef209bdfda" --annotation=_companyName=Microsoft --annotation=_productName=VSCode --annotation=_version=1.103.1 "--annotation=lsb-release=CentOS Stream 10 (Coughlan)" --annotation=plat=Linux --annotation=prod=Electron --annotation=ver=37.2.3 --initial-client-fd=40 --shared-client-connection[0m
+                 │ │ ├─[0;38;5;245m30105 /usr/share/code/code --type=zygote --no-zygote-sandbox[0m
+                 │ │ ├─[0;38;5;245m30112 /proc/self/exe --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=30084 --enable-crash-reporter=78d651d2-577f-4ddb-bcbf-c6898d1c887c,no_channel --user-data-dir=/home/elliottmejia/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14059213460105492424,18439324905775247588,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version[0m
+                 │ │ ├─[0;38;5;245m30145 /usr/share/code/code --type=zygote[0m
+                 │ │ ├─[0;38;5;245m30189 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=30084 --enable-crash-reporter=78d651d2-577f-4ddb-bcbf-c6898d1c887c,no_channel --user-data-dir=/home/elliottmejia/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14059213460105492424,18439324905775247588,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version[0m
+                 │ │ ├─[0;38;5;245m30190 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=30084 --enable-crash-reporter=78d651d2-577f-4ddb-bcbf-c6898d1c887c,no_channel --user-data-dir=/home/elliottmejia/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14059213460105492424,18439324905775247588,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version[0m
+                 │ │ └─[0;38;5;245m30191 /proc/self/exe --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --crashpad-handler-pid=30084 --enable-crash-reporter=78d651d2-577f-4ddb-bcbf-c6898d1c887c,no_channel --user-data-dir=/home/elliottmejia/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,14059213460105492424,18439324905775247588,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,ScreenAIOCREnabled,SpareRendererForSitePerProcess --variations-seed-version[0m
+                 │ ├─app-gnome-firefox-29021.scope
+                 │ │ ├─[0;38;5;245m29021 /usr/lib64/firefox/firefox[0m
+                 │ │ ├─[0;38;5;245m29110 /usr/lib64/firefox/firefox -contentproc -parentBuildID 20250507093054 -prefsLen 28772 -prefMapSize 249622 -appDir /usr/lib64/firefox/browser {f50ede14-4c9d-4cad-826f-b8ced0c0f1fd} 29021 socket[0m
+                 │ │ ├─[0;38;5;245m29126 /usr/lib64/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 28913 -prefMapSize 249622 -jsInitLen 234912 -parentBuildID 20250507093054 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser {d0350d30-ac37-48b9-9acb-89fb3a9dafd7} 29021 tab[0m
+                 │ │ ├─[0;38;5;245m29169 /usr/lib64/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 34437 -prefMapSize 249622 -jsInitLen 234912 -parentBuildID 20250507093054 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser {2d685acd-c297-4495-b526-d9431ce39616} 29021 tab[0m
+                 │ │ ├─[0;38;5;245m29214 /usr/lib64/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 34491 -prefMapSize 249622 -jsInitLen 234912 -parentBuildID 20250507093054 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser {7e19d58a-3f2c-4e9f-a65b-cc5c019b16df} 29021 tab[0m
+                 │ │ ├─[0;38;5;245m29268 /usr/lib64/firefox/firefox -contentproc -parentBuildID 20250507093054 -sandboxingKind 0 -prefsLen 34548 -prefMapSize 249622 -appDir /usr/lib64/firefox/browser {ef9e136e-3ec4-4588-be7f-1842b96f17d4} 29021 utility[0m
+                 │ │ ├─[0;38;5;245m29275 /usr/lib64/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 31611 -prefMapSize 249622 -jsInitLen 234912 -parentBuildID 20250507093054 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser {28cee069-169a-48f2-a688-d0940ad5ba1a} 29021 tab[0m
+                 │ │ ├─[0;38;5;245m29277 /usr/lib64/firefox/firefox -contentproc -childID 5 -isForBrowser -prefsLen 31611 -prefMapSize 249622 -jsInitLen 234912 -parentBuildID 20250507093054 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser {b0f5fcbf-0357-4f47-8d21-0e238c7e3a93} 29021 tab[0m
+                 │ │ ├─[0;38;5;245m29386 /usr/lib64/firefox/firefox -contentproc -childID 7 -isForBrowser -prefsLen 31611 -prefMapSize 249622 -jsInitLen 234912 -parentBuildID 20250507093054 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser {fcf04ddd-8378-4589-a733-9a213a3fda0d} 29021 tab[0m
+                 │ │ ├─[0;38;5;245m29421 /usr/lib64/firefox/firefox -contentproc -parentBuildID 20250507093054 -prefsLen 34548 -prefMapSize 249622 -appDir /usr/lib64/firefox/browser {224d8b28-709e-4e2b-86fc-5658094233c6} 29021 rdd[0m
+                 │ │ ├─[0;38;5;245m29444 /usr/lib64/firefox/firefox -contentproc -childID 8 -isForBrowser -prefsLen 31611 -prefMapSize 249622 -jsInitLen 234912 -parentBuildID 20250507093054 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser {55826007-a27d-41f8-b6a2-72d6c7dac304} 29021 tab[0m
+                 │ │ ├─[0;38;5;245m29886 /usr/lib64/firefox/firefox -contentproc -childID 9 -isForBrowser -prefsLen 31611 -prefMapSize 249622 -jsInitLen 234912 -parentBuildID 20250507093054 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser {e7ec6e4f-d9f3-45e7-b242-3b8c89492337} 29021 tab[0m
+                 │ │ └─[0;38;5;245m29923 /usr/lib64/firefox/firefox -contentproc -childID 10 -isForBrowser -prefsLen 31611 -prefMapSize 249622 -jsInitLen 234912 -parentBuildID 20250507093054 -greomni /usr/lib64/firefox/omni.ja -appomni /usr/lib64/firefox/browser/omni.ja -appDir /usr/lib64/firefox/browser {155fc697-86b5-4ba6-a32b-093a87dfbf35} 29021 tab[0m
+                 │ ├─app-gnome-org.gnome.Evolution\x2dalarm\x2dnotify-2582.scope
+                 │ │ └─[0;38;5;245m2582 /usr/libexec/evolution-data-server/evolution-alarm-notify[0m
+                 │ ├─app-gnome-org.gnome.SettingsDaemon.DiskUtilityNotify-2591.scope
+                 │ │ └─[0;38;5;245m2591 /usr/libexec/gsd-disk-utility-notify[0m
+                 │ ├─app-gnome-org.gnome.Software-2633.scope
+                 │ │ ├─[0;38;5;245m 2633 /usr/bin/gnome-software --gapplication-service[0m
+                 │ │ ├─[0;38;5;245m17530 /usr/bin/podman events --format "{{json .}}" --filter event=create --filter event=destroy --filter event=die --filter event=health-status --filter event=kill --filter event=pause --filter event=rename --filter event=resize --filter event=restart --filter event=start --filter event=stop --filter event=unpause --filter event=update --filter event=exec_create[0m
+                 │ │ └─[0;38;5;245m17564 /usr/bin/podman events --format "{{json .}}" --filter event=destroy --filter event=die --filter event=kill --filter event=create --filter event=rename --filter event=resize --filter event=restart --filter event=start --filter event=stop --filter event=unpause --filter event=prune[0m
+                 │ ├─app-gnome\x2dsession\x2dmanager.slice
+                 │ │ └─gnome-session-manager@gnome.service
+                 │ │   └─[0;38;5;245m2397 /usr/libexec/gnome-session-binary --systemd-service --session=gnome[0m
+                 │ ├─dconf.service
+                 │ │ └─[0;38;5;245m2515 /usr/libexec/dconf-service[0m
+                 │ ├─evolution-addressbook-factory.service
+                 │ │ └─[0;38;5;245m2819 /usr/libexec/evolution-addressbook-factory[0m
+                 │ ├─evolution-calendar-factory.service
+                 │ │ └─[0;38;5;245m2760 /usr/libexec/evolution-calendar-factory[0m
+                 │ ├─evolution-source-registry.service
+                 │ │ └─[0;38;5;245m2514 /usr/libexec/evolution-source-registry[0m
+                 │ ├─gnome-session-monitor.service
+                 │ │ └─[0;38;5;245m2393 /usr/libexec/gnome-session-ctl --monitor[0m
+                 │ ├─ptyxis-spawn-2abfe835-449c-4407-9bf5-f628f533b2da.scope
+                 │ │ ├─[0;38;5;245m28798 /usr/bin/bash[0m
+                 │ │ ├─[0;38;5;245m30774 systemctl status[0m
+                 │ │ └─[0;38;5;245m30775 less[0m
+                 │ ├─ptyxis-spawn-df7da8bd-249f-4c98-8aef-a77c629e7761.scope
+                 │ │ ├─[0;38;5;245m28277 /usr/bin/bash[0m
+                 │ │ ├─[0;38;5;245m28367 bun run start[0m
+                 │ │ └─[0;38;5;245m28368 bun run --watch src/server.ts[0m
+                 │ ├─xdg-desktop-portal-gnome.service
+                 │ │ └─[0;38;5;245m3065 /usr/libexec/xdg-desktop-portal-gnome[0m
+                 │ └─xdg-desktop-portal-gtk.service
+                 │   └─[0;38;5;245m3092 /usr/libexec/xdg-desktop-portal-gtk[0m
+                 ├─background.slice
+                 │ └─tracker-miner-fs-3.service
+                 │   └─[0;38;5;245m3448 /usr/libexec/tracker-miner-fs-3[0m
+                 ├─init.scope
+                 │ ├─[0;38;5;245m2285 /usr/lib/systemd/systemd --user[0m
+                 │ └─[0;38;5;245m2287 "(sd-pam)"[0m
+                 ├─session.slice
+                 │ ├─at-spi-dbus-bus.service
+                 │ │ ├─[0;38;5;245m2476 /usr/libexec/at-spi-bus-launcher[0m
+                 │ │ ├─[0;38;5;245m2482 /usr/bin/dbus-broker-launch --config-file=/usr/share/defaults/at-spi2/accessibility.conf --scope user[0m
+                 │ │ └─[0;38;5;245m2483 dbus-broker --log 4 --controller 9 --machine-id 8672520c95d646dbaa28ed95ee2cc60f --max-bytes 100000000000000 --max-fds 6400000 --max-matches 5000000000[0m
+                 │ ├─dbus-broker.service
+                 │ │ ├─[0;38;5;245m2326 /usr/bin/dbus-broker-launch --scope user[0m
+                 │ │ └─[0;38;5;245m2330 dbus-broker --log 4 --controller 9 --machine-id 8672520c95d646dbaa28ed95ee2cc60f --max-bytes 100000000000000 --max-fds 25000000000000 --max-matches 5000000000[0m
+                 │ ├─gvfs-daemon.service
+                 │ │ ├─[0;38;5;245m 2431 /usr/libexec/gvfsd[0m
+                 │ │ ├─[0;38;5;245m 2437 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f[0m
+                 │ │ ├─[0;38;5;245m 3417 /usr/libexec/gvfsd-trash --spawner :1.17 /org/gtk/gvfs/exec_spaw/0[0m
+                 │ │ ├─[0;38;5;245m17915 /usr/libexec/gvfsd-http --spawner :1.17 /org/gtk/gvfs/exec_spaw/1[0m
+                 │ │ ├─[0;38;5;245m22337 /usr/libexec/gvfsd-network --spawner :1.17 /org/gtk/gvfs/exec_spaw/2[0m
+                 │ │ ├─[0;38;5;245m22347 /usr/libexec/gvfsd-dnssd --spawner :1.17 /org/gtk/gvfs/exec_spaw/3[0m
+                 │ │ ├─[0;38;5;245m22353 /usr/libexec/gvfsd-wsdd --spawner :1.17 /org/gtk/gvfs/exec_spaw/4[0m
+                 │ │ └─[0;38;5;245m22358 /usr/bin/python3 /usr/bin/wsdd --no-host --discovery --listen /run/user/1000/gvfsd/wsdd[0m
+                 │ ├─gvfs-goa-volume-monitor.service
+                 │ │ └─[0;38;5;245m2852 /usr/libexec/gvfs-goa-volume-monitor[0m
+                 │ ├─gvfs-gphoto2-volume-monitor.service
+                 │ │ └─[0;38;5;245m2832 /usr/libexec/gvfs-gphoto2-volume-monitor[0m
+                 │ ├─gvfs-metadata.service
+                 │ │ └─[0;38;5;245m3135 /usr/libexec/gvfsd-metadata[0m
+                 │ ├─gvfs-mtp-volume-monitor.service
+                 │ │ └─[0;38;5;245m2803 /usr/libexec/gvfs-mtp-volume-monitor[0m
+                 │ ├─gvfs-udisks2-volume-monitor.service
+                 │ │ └─[0;38;5;245m2761 /usr/libexec/gvfs-udisks2-volume-monitor[0m
+                 │ ├─org.freedesktop.IBus.session.GNOME.service
+                 │ │ ├─[0;38;5;245m2537 /usr/bin/ibus-daemon --panel disable[0m
+                 │ │ ├─[0;38;5;245m2713 /usr/libexec/ibus-dconf[0m
+                 │ │ ├─[0;38;5;245m2714 /usr/libexec/ibus-extension-gtk3[0m
+                 │ │ └─[0;38;5;245m2900 /usr/libexec/ibus-engine-simple[0m
+                 │ ├─org.gnome.SettingsDaemon.A11ySettings.service
+                 │ │ └─[0;38;5;245m2546 /usr/libexec/gsd-a11y-settings[0m
+                 │ ├─org.gnome.SettingsDaemon.Color.service
+                 │ │ └─[0;38;5;245m2547 /usr/libexec/gsd-color[0m
+                 │ ├─org.gnome.SettingsDaemon.Datetime.service
+                 │ │ └─[0;38;5;245m2552 /usr/libexec/gsd-datetime[0m
+                 │ ├─org.gnome.SettingsDaemon.Housekeeping.service
+                 │ │ └─[0;38;5;245m2553 /usr/libexec/gsd-housekeeping[0m
+                 │ ├─org.gnome.SettingsDaemon.Keyboard.service
+                 │ │ └─[0;38;5;245m2559 /usr/libexec/gsd-keyboard[0m
+                 │ ├─org.gnome.SettingsDaemon.MediaKeys.service
+                 │ │ └─[0;38;5;245m2561 /usr/libexec/gsd-media-keys[0m
+                 │ ├─org.gnome.SettingsDaemon.Power.service
+                 │ │ └─[0;38;5;245m2564 /usr/libexec/gsd-power[0m
+                 │ ├─org.gnome.SettingsDaemon.PrintNotifications.service
+                 │ │ ├─[0;38;5;245m2566 /usr/libexec/gsd-print-notifications[0m
+                 │ │ └─[0;38;5;245m3137 /usr/libexec/gsd-printer[0m
+                 │ ├─org.gnome.SettingsDaemon.Rfkill.service
+                 │ │ └─[0;38;5;245m2572 /usr/libexec/gsd-rfkill[0m
+                 │ ├─org.gnome.SettingsDaemon.ScreensaverProxy.service
+                 │ │ └─[0;38;5;245m2580 /usr/libexec/gsd-screensaver-proxy[0m
+                 │ ├─org.gnome.SettingsDaemon.Sharing.service
+                 │ │ └─[0;38;5;245m2583 /usr/libexec/gsd-sharing[0m
+                 │ ├─org.gnome.SettingsDaemon.Smartcard.service
+                 │ │ └─[0;38;5;245m2589 /usr/libexec/gsd-smartcard[0m
+                 │ ├─org.gnome.SettingsDaemon.Sound.service
+                 │ │ └─[0;38;5;245m2594 /usr/libexec/gsd-sound[0m
+                 │ ├─org.gnome.SettingsDaemon.UsbProtection.service
+                 │ │ └─[0;38;5;245m2597 /usr/libexec/gsd-usb-protection[0m
+                 │ ├─org.gnome.SettingsDaemon.Wacom.service
+                 │ │ └─[0;38;5;245m2602 /usr/libexec/gsd-wacom[0m
+                 │ ├─org.gnome.SettingsDaemon.XSettings.service
+                 │ │ ├─[0;38;5;245m16229 /usr/libexec/gsd-xsettings[0m
+                 │ │ └─[0;38;5;245m16248 /usr/libexec/ibus-x11[0m
+                 │ ├─org.gnome.Shell@wayland.service
+                 │ │ ├─[0;38;5;245m 2422 /usr/bin/gnome-shell[0m
+                 │ │ ├─[0;38;5;245m16222 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.QFDWB3 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7 -byteswappedclients -enable-ei-portal[0m
+                 │ │ └─[0;38;5;245m16270 /usr/libexec/mutter-x11-frames[0m
+                 │ ├─pipewire-pulse.service
+                 │ │ └─[0;38;5;245m2922 /usr/bin/pipewire-pulse[0m
+                 │ ├─pipewire.service
+                 │ │ └─[0;38;5;245m2917 /usr/bin/pipewire[0m
+                 │ ├─wireplumber.service
+                 │ │ └─[0;38;5;245m2920 /usr/bin/wireplumber[0m
+                 │ ├─xdg-desktop-portal.service
+                 │ │ └─[0;38;5;245m2983 /usr/libexec/xdg-desktop-portal[0m
+                 │ ├─xdg-document-portal.service
+                 │ │ ├─[0;38;5;245m2996 /usr/libexec/xdg-document-portal[0m
+                 │ │ └─[0;38;5;245m3009 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc[0m
+                 │ └─xdg-permission-store.service
+                 │   └─[0;38;5;245m2489 /usr/libexec/xdg-permission-store[0m
+                 └─user.slice
+                   └─podman-pause-d437e66e.scope
+                     └─[0;38;5;245m3227 catatonit -P[0m

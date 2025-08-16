@@ -30,10 +30,14 @@ export function createServer() {
 
   return app;
 }
+if(process.env.TEST){
+  console.log("env loaded");
+}
 
 if (import.meta.main) {
   const app = createServer();
-  const port = Number(process.env.PORT || 3000);
-  app.listen(port);
-  console.log(`Server listening on http://localhost:${port}`);
+  const port = Number(process.env.PORT || 8080);
+  const host = process.env.HOST || "0.0.0.0";
+  app.listen({port, hostname: host});
+  console.log(`Server listening on http://${host}:${port}`);
 }
