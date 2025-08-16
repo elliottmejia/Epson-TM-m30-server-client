@@ -1,6 +1,6 @@
 // src/printer/index.ts
 import ThermalPkg from "node-thermal-printer";
-import { PRINTER_ADDR } from "../config";
+import { PRINTER_ADDR, TOP_MARGIN } from "../config";
 import { renderTitleImage } from "../image/title";
 import { normalizeImage } from "../image/normalize";
 
@@ -14,7 +14,8 @@ export async function printTicket(
   title?: string,
   body?: string,
   imageBuffer?: Buffer | null,
-  opts?: { font?: string }
+  opts?: { font?: string },
+  qrData?: string
 ) {
   const printer = new ThermalPrinter({
     type: PrinterTypes.EPSON,
@@ -44,7 +45,12 @@ export async function printTicket(
 
   // Render EVA title as an image and clamp to 16 tones
   if (title && title.trim().length) {
+    printer.bold(true);
+    for (let i = 0; i < TOP_MARGIN; i++) {
+      printer.println("");
+    }
     if (opts?.font && opts.font.toLowerCase() !== "default") {
+      // Render title as image if in nonstandard font
       const titleRaster = await renderTitleImage(title.trim(), {
         font: opts.font,
       });
@@ -52,13 +58,14 @@ export async function printTicket(
       await printer.printImageBuffer(titleClamped);
       printer.newLine();
     } else {
+      // Use built-in title rendering
       printer.alignCenter();
-      if (typeof printer.setTextDoubleHeight === "function")
-        printer.setTextDoubleHeight();
+      printer.setTextDoubleHeight();
       printer.println(title.trim());
-      if (typeof printer.setTextNormal === "function") printer.setTextNormal();
+      printer.setTextNormal();
       printer.alignLeft();
     }
+    printer.bold(false);
   }
 
   // Optional rule
@@ -69,11 +76,16 @@ export async function printTicket(
 
   if (imageBuffer?.length) {
     printer.newLine();
-    // imageBuffer is already normalized by your routes
+    // imageBuffer is already normalized by routes
     await printer.printImageBuffer(imageBuffer);
   }
 
-  printer.drawLine();
+  if (qrData && typeof printer.printQR === "function") {
+    printer.newLine();
+    printer.alignCenter();
+    printer.printQR(qrData, { cellSize: 8, correction: "M" });
+  }
+
   printer.cut();
 
   try {

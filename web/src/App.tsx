@@ -6,18 +6,22 @@ export default function App() {
   const [body, setBody] = useState('Hello from the frontend');
   const [font, setFont] = useState("default");
   const [file, setFile] = useState<File | null>(null);
-  const [health, setHealth] = useState('checking...');
+  const [qr, setQR] = useState<string>("");
+  const [health, setHealth] = useState("checking...");
   const [useMultipart, setUseMultipart] = useState(true);
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
 
   useEffect(() => {
     getHealth()
-      .then(h => setHealth(`OK - ${h.printer}`))
-      .catch(e => setHealth(`Error - ${String(e.message || e)}`));
+      .then((h) => setHealth(`OK - ${h.printer}`))
+      .catch((e) => setHealth(`Error - ${String(e.message || e)}`));
   }, []);
 
-  const previewUrl = useMemo(() => (file ? URL.createObjectURL(file) : ''), [file]);
+  const previewUrl = useMemo(
+    () => (file ? URL.createObjectURL(file) : ""),
+    [file]
+  );
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -26,26 +30,13 @@ export default function App() {
     try {
       /**
        * Decide how to send the print job data to the server based on the `useMultipart` flag.
-       *
-       * When `useMultipart` is true, sends as multipart/form-data using `sendPrintMultipart`,
-       * which transmits the image file in binary form along with text fields. This is more
-       * efficient for large images because it avoids base64 encoding overhead.
-       *
-       * When `useMultipart` is false, sends as JSON using `sendPrintBase64`, which embeds
-       * the image file (if present) as a base64-encoded string. This is simpler to debug,
-       * but increases payload size due to base64 encoding.
-       *
-       * Both methods include the following data:
-       *  - title {string}  Receipt title text
-       *  - body {string}   Receipt body text
-       *  - font {string}   Selected font key ("default" or "evangelion")
-       *  - file {File|null} Optional image to include in the printout
+       * multipart is binary form data, which avoids base64 overhead.
+       * base64 is JSON encoded, which is easier to debug but larger.
        */
       if (useMultipart) {
-        //
-        await sendPrintMultipart({ title, body, font, file });
+        await sendPrintMultipart({ title, body, font, file, qr });
       } else {
-        await sendPrintBase64({ title, body, font, file });
+        await sendPrintBase64({ title, body, font, file, qr });
       }
       setMsg("Sent to printer");
     } catch (e: any) {
@@ -97,6 +88,16 @@ export default function App() {
             type="file"
             accept="image/*"
             onChange={(e) => setFile(e.target.files?.[0] ?? null)}
+          />
+        </label>
+
+        <label>
+          <div>QR (text or URL)</div>
+          <input
+            type="text"
+            value={qr}
+            onChange={(e) => setQR(e.target.value)}
+            placeholder="Enter QR code text or URL"
           />
         </label>
 

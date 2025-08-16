@@ -8,3 +8,7 @@ export const PRINTER_WIDTH = Number(process.env.PRINTER_WIDTH || 576);
 export const MAX_IMAGE_HEIGHT = process.env.MAX_IMAGE_HEIGHT
   ? Number(process.env.MAX_IMAGE_HEIGHT)
   : undefined;
+
+export const TOP_MARGIN: number = process.env.TOP_MARGIN
+  ? Number(process.env.TOP_MARGIN)
+  : 2;

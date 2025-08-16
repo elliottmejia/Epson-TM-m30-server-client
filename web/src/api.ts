@@ -3,24 +3,26 @@ export type PrintPayload = {
   body: string;
   file?: File | null;
   font?: string;
+  qr?: string | null;
 };
 
 export async function getHealth() {
-  const res = await fetch('/api/v1/health');
+  const res = await fetch("/api/v1/health");
   if (!res.ok) throw new Error(`Health failed: ${res.status}`);
   return res.json() as Promise<{ ok: boolean; printer: string }>;
 }
 
 export async function sendPrintMultipart(payload: PrintPayload) {
   const form = new FormData();
-  form.append('title', payload.title);
-  form.append('body', payload.body);
-  if (payload.file) form.append('image', payload.file);
+  form.append("title", payload.title);
+  form.append("body", payload.body);
+  if (payload.file) form.append("image", payload.file);
   if (payload.font) form.append("font", payload.font);
+  if (payload.qr) form.append("qr", payload.qr);
 
-  const res = await fetch('/api/v1/print-multipart', {
-    method: 'POST',
-    body: form
+  const res = await fetch("/api/v1/print-multipart", {
+    method: "POST",
+    body: form,
   });
 
   if (!res.ok) {
@@ -45,6 +47,7 @@ export async function sendPrintBase64(payload: PrintPayload) {
       body: payload.body,
       imageBase64,
       font: payload.font ?? "default",
+      qr: payload.qr ?? null,
     }),
   });
 

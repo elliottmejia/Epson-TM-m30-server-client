@@ -14,11 +14,13 @@ export function mountPrintRoutes(app: Elysia) {
             body: content,
             imageBase64,
             font,
+            qr,
           } = body as {
             title?: string;
             body?: string;
             imageBase64?: string;
-            font: string;
+            font?: string;
+            qr?: string | null;
           };
 
           let imageBuffer: Buffer | null = null;
@@ -33,7 +35,13 @@ export function mountPrintRoutes(app: Elysia) {
             });
           }
 
-          await printTicket(title, content, imageBuffer);
+          await printTicket(
+            title,
+            content,
+            imageBuffer,
+            { font },
+            qr ?? undefined
+          );
           return { ok: true };
         } catch (err: any) {
           if ((err as any)?.sentMaybePrinted) {
@@ -54,6 +62,7 @@ export function mountPrintRoutes(app: Elysia) {
           body: t.String(),
           imageBase64: t.Optional(t.String()),
           font: t.Optional(t.String()),
+          qr: t.Optional(t.String()),
         }),
       }
     )
@@ -64,6 +73,7 @@ export function mountPrintRoutes(app: Elysia) {
           const title = (body as any)?.title ?? "";
           const content = (body as any)?.body ?? "";
           const font = (body as any)?.font ?? "default";
+          const qr = (body as any)?.qr ?? null;
           let imageBuffer: Buffer | null = null;
 
           const file = (body as any)?.image;
@@ -74,7 +84,13 @@ export function mountPrintRoutes(app: Elysia) {
             });
           }
 
-          await printTicket(title, content, imageBuffer, { font });
+          await printTicket(
+            title,
+            content,
+            imageBuffer,
+            { font },
+            qr ?? undefined
+          );
           return { ok: true };
         } catch (err: any) {
           set.status = 500;
@@ -87,6 +103,7 @@ export function mountPrintRoutes(app: Elysia) {
           body: t.String(),
           image: t.Optional(t.Any()),
           font: t.Optional(t.String()),
+          qr: t.Optional(t.String()),
         }),
       }
     );
