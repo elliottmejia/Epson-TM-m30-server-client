@@ -2,8 +2,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { getHealth, sendPrintMultipart, sendPrintBase64 } from './api';
 
 export default function App() {
-  const [title, setTitle] = useState('Test ticket');
-  const [body, setBody] = useState('Hello from the frontend');
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
   const [font, setFont] = useState("default");
   const [file, setFile] = useState<File | null>(null);
   const [qr, setQR] = useState<string>("");
@@ -68,7 +68,7 @@ export default function App() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
-            placeholder="Receipt title"
+            placeholder=""
           />
         </label>
 
