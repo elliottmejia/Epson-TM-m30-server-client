@@ -3,7 +3,11 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "dev",
   "workspaceFolder": "/workspaces/server",
-  "forwardPorts": [8080, 5173],
+  "forwardPorts": [
+    8080,
+    3000,
+    5173
+  ],
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {}
   },

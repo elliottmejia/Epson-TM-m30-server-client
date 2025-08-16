@@ -68,7 +68,7 @@ export default function App() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
-            placeholder=""
+            placeholder="Title"
           />
         </label>
 

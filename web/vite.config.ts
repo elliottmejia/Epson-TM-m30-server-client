@@ -6,11 +6,16 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': 'http:'+ (process.env.HOST || 'localhost') + ':' + (process.env.PORT || '8080') + '/api',
-    }
+      "/api": {
+        target: `http://${process.env.HOST || "localhost"}:${
+          process.env.PORT || "8080"
+        }`,
+        changeOrigin: true,
+      },
+    },
   },
   build: {
-    outDir: 'dist',
-    emptyOutDir: true
-  }
+    outDir: "dist",
+    emptyOutDir: true,
+  },
 });
