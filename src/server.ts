@@ -1,4 +1,5 @@
 import { Elysia } from "elysia";
+import { swagger } from "@elysiajs/swagger";
 import { staticPlugin } from "@elysiajs/static";
 import { PRINTER_ADDR } from "./config";
 import { mountPrintRoutes } from "./routes/print";
@@ -7,6 +8,7 @@ import { resolve } from "node:path";
 
 export function createServer() {
   const app = new Elysia();
+  app.use(swagger());
 
   // API first
   app.get("/api/v1/health", () => ({ ok: true, printer: PRINTER_ADDR }));
