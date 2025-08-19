@@ -11,11 +11,18 @@ export default function App() {
   const [useMultipart, setUseMultipart] = useState(true);
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
+  const [indicatorGreen, setIndicatorGreen] = useState(false);
 
   useEffect(() => {
     getHealth()
-      .then((h) => setHealth(`OK - ${h.printer}`))
-      .catch((e) => setHealth(`Error - ${String(e.message || e)}`));
+      .then((h) => {
+        setHealth(`OK - ${h.printer}`);
+        setIndicatorGreen(true);
+      })
+      .catch((e) => {
+        setHealth(`Error - ${String(e.message || e)}`);
+        setIndicatorGreen(false);
+      });
   }, []);
 
   const previewUrl = useMemo(
@@ -49,9 +56,14 @@ export default function App() {
   return (
     <div className="container">
       <h1 className={font === "evangelion" ? "eva-title" : undefined}>
-        TM‑M30 Printer Console
+        Reciewt Pwinter
       </h1>
-      <p className="muted">Health: {health}</p>
+      <div style={{ marginBottom: "10px" }}>
+        <span
+          className={`status-indicator ${indicatorGreen ? "green" : "red"}`}
+        ></span>
+        <span className="muted">Health: {health}</span>
+      </div>
 
       <form onSubmit={onSubmit} className="grid">
         <label>

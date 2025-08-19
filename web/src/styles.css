@@ -6,6 +6,7 @@
   font-display: swap;
 }
 
+
 :root {
   --fg: #111;
   --muted: #666;
@@ -78,6 +79,20 @@ button:disabled {
 }
 
 .status { margin-top: 1rem; }
+
+.status-indicator{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.green{
+  background-color: #4caf50;
+}
+.red{
+  background-color: #f44336;
+}
 
 h1 {
     font-family: 'EVA', sans-serif;
