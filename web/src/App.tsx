@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
-import { getHealth, sendPrintMultipart, sendPrintBase64 } from './api';
+import { getHealth, sendPrintMultipart, sendPrintBase64 } from "./api";
+import Editor from "./components/Editor";
 
 export default function App() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  //temp
   const [font, setFont] = useState("default");
   const [file, setFile] = useState<File | null>(null);
   const [qr, setQR] = useState<string>("");
@@ -86,12 +88,13 @@ export default function App() {
 
         <label>
           <div>Body</div>
-          <textarea
+          {/* <textarea
             value={body}
             onChange={(e) => setBody(e.target.value)}
             rows={5}
             placeholder="Body text"
-          />
+          /> */}
+          <Editor />
         </label>
 
         <label>

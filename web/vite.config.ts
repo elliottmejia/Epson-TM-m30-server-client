@@ -18,4 +18,8 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
   },
+  optimizeDeps: {
+    include: ["@tinymce/tinymce-react"],
+    exclude: ["tinymce"],
+  },
 });
