@@ -164,8 +164,8 @@ export default function Editor() {
     <br/>
     <br/>
     Lick was the kind of man that often said no. A true "not tonight, I'm not feeling well" when he is feeling fine kind of guy. "My cat's sick".
-    Usually, they were ailments.
-    His closest friends believed him to be a hypochondriac.
+    Usually, the excuses were ailments.
+    His closest friends, whose intelligences bordered on Lick's, believed him to be a hypochondriac.
     <br/>
     <br/>
     Yet, for some odd reason, Lick obliged when a black 1989 Lincoln towncar swerved into in his path and opened a door. He didn't know why. He just got in.
