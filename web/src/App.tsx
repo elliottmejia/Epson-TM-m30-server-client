@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { getHealth, sendPrintMultipart, sendPrintBase64 } from './api';
+import Editor  from './components/Editor';
 
 export default function App() {
   const [title, setTitle] = useState("");
@@ -12,6 +13,7 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
   const [indicatorGreen, setIndicatorGreen] = useState(false);
+
 
   useEffect(() => {
     getHealth()
@@ -86,11 +88,13 @@ export default function App() {
 
         <label>
           <div>Body</div>
-          <textarea
+          {/* <textarea
             value={body}
             onChange={(e) => setBody(e.target.value)}
             rows={5}
             placeholder="Body text"
+          /> */}
+          <Editor
           />
         </label>
 

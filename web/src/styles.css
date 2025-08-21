@@ -8,11 +8,11 @@
 
 
 :root {
-  --fg: #111;
-  --muted: #666;
-  --bg: #fff;
-  --border: #e5e5e5;
-  --accent: #0a7cff;
+  --fg: #000000;
+  --muted: #6e6e6e;
+  --bg: rgb(255, 255, 255);
+  --border: #696969;
+  --accent: #000000;
 }
 
 * { box-sizing: border-box; }
@@ -48,7 +48,7 @@ input[type="text"], input[type="file"], textarea, input:not([type]) {
   width: 100%;
 }
 
-input, textarea, button {
+input, textarea {
   padding: .6rem .7rem;
   border: 1px solid var(--border);
   border-radius: .5rem;
@@ -57,7 +57,8 @@ input, textarea, button {
 
 button {
   background: var(--accent);
-  color: #fff;
+  margin-inline: 1px;
+  color: #ffffff;
   border: none;
   cursor: pointer;
 }
@@ -97,4 +98,13 @@ button:disabled {
 h1 {
     font-family: 'EVA', sans-serif;
     font-size: 2.5rem;
+}
+
+[type=submit]{
+  background: var(--accent);
+  color: #ffffff;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
 }
