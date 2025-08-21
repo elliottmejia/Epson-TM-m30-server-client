@@ -156,12 +156,12 @@ export default function Editor () {
   const editor = useEditor({
     extensions,
     content: `
-`,
+    `,
   })
   return (
     <div id="editor-instance">
       <MenuBar editor={editor} />
-      <EditorContent  editor={editor} />
+  <EditorContent editor={editor} className="custom-editor-area" />
     </div>
   )
 }

@@ -88,11 +88,6 @@
     padding-left: 1rem;
   }
 
-  .ProseMirror{
-    min-height:450px;
-  }
-
-
   hr {
     border: none;
     border-top: 1px solid var(--gray-2);
@@ -100,3 +95,16 @@
   }
   border: 1px solid var(--gray-2);
 }
+
+  .ProseMirror {
+    min-height:200px;
+    max-width:100%;
+    width:100%;
+    box-sizing:border-box;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: 2px solid var(--gray-2);
+  }
