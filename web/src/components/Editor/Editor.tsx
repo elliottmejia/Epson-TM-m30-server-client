@@ -159,20 +159,28 @@ export default function Editor() {
     Lick was very afraid.
     <br/>
     <br/>
-    <strong>Lick had been presented with a 1:16 model of Elvis Presley, </strong>stuffed tightly with what he could only assume was the finest
-    mirror sugar Colombia has to offer. Had he a choice in the matter, Elvis would have stayed on the table. But he was in too deep now... 
-    much like the model found itself shortly.
+    <strong>Lick had been presented with a 1:16 model of Elvis Presley </strong> stuffed with enough booger sugar to kill, well, Elvis Presley. 
+    Had Lick held a choice in the matter, Elvis would have stayed on the table.
     <br/>
     <br/>
-    Lick had a horrible habit of always saying yes, never truly standing for anything.
-    This unfortunate habit had somehow led him into a life of crime.  A tinted black towncar had simply appeared, asking him to get in, to his obligement.
-    So innocent he was, before the incident.
+    Lick was the kind of man that often said no. A true "not tonight, I'm not feeling well" when he is feeling fine kind of guy. "My cat's sick".
+    Usually, they were ailments.
+    His closest friends believed him to be a hypochondriac.
+    <br/>
+    <br/>
+    Yet, for some odd reason, Lick obliged when a black 1989 Lincoln towncar swerved into in his path and opened a door. He didn't know why. He just got in.
+    <br/>
+    <br/>
+    He shouldn't have.
     <br/>
     <br/>
     For where that car had taken him, no man should ever go.
     <br/>
     <br/>
-    A boxing ring disaster. A human toilet. A sex robot set to KILL.
+    A nefarious botox disaster. A human toilet. A sex robot set to KILL.
+    <br/>
+    <br/>
+    And yes, Lick boofed a 1:16 scale action figure of Elvis Presley.
     <br/>
     <br/>
     Get it all in <strong>"Lick DeSnuts: The Unbelievable Story of a Man Who Said Yes"</strong>
