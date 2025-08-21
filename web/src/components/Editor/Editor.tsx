@@ -152,16 +152,38 @@ function MenuBar({ editor }: { editor: EditorType }) {
   )
 }
 
-export default function Editor () {
+export default function Editor() {
   const editor = useEditor({
     extensions,
     content: `
+    Lick was very afraid.
+    <br/>
+    <br/>
+    <strong>Lick had been presented with a 1:16 model of Elvis Presley, </strong>stuffed tightly with what he could only assume was the finest
+    mirror sugar Colombia has to offer. Had he a choice in the matter, Elvis would have stayed on the table. But he was in too deep now... 
+    much like the model found itself shortly.
+    <br/>
+    <br/>
+    Lick had a horrible habit of always saying yes, never truly standing for anything.
+    This unfortunate habit had somehow led him into a life of crime.  A tinted black towncar had simply appeared, asking him to get in, to his obligement.
+    So innocent he was, before the incident.
+    <br/>
+    <br/>
+    For where that car had taken him, no man should ever go.
+    <br/>
+    <br/>
+    A boxing ring disaster. A human toilet. A sex robot set to KILL.
+    <br/>
+    <br/>
+    Get it all in <strong>"Lick DeSnuts: The Unbelievable Story of a Man Who Said Yes"</strong>
+    
+    
     `,
   })
   return (
     <div id="editor-instance">
       <MenuBar editor={editor} />
-  <EditorContent editor={editor} className="custom-editor-area" />
+      <EditorContent editor={editor} className="custom-editor-area" />
     </div>
   )
 }
